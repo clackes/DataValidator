@@ -1,0 +1,101 @@
+id,name,email,birth_date,phone_number,address,city,postal_code,state,country,latitude,longitude
+44645a04-6c9e-4a93-9106-8c898e52c070,Chiara Micca-Trillini,mtraetta@example.com,1977-08-16,+39 3917542572,"Piazza Bonatti, 10 Piano 1
+64037, Montegualtieri (TE)",Maresca,10086,Prato,Territori Francesi del sud,15.5323955,13.315553
+a6efb4c6-31e4-41e8-9528-1e4f4d6df5c2,Luciano Boccaccio-Cipolla,gianluca51@example.net,1946-12-23,+39 3917542572,"Stretto Nico, 140 Piano 5
+26851, Borgo San Giovanni (LO)",Erve,34127,Trieste,Mongolia,20.118425,81.523872
+53093e24-15cb-41d3-a8eb-74f999f7fc0c,Calcedonio Golgi,pratesiniccolo@example.org,2002-08-05,+39 3917542572,"Via Aria, 494
+14019, Villanova D'Asti Stazione (AT)",Coperchia,03040,Latina,Repubblica Ceca,-14.2490815,21.044291
+53537d4d-1ca4-4fdc-be40-41bae8c42d88,Natalia Mazzanti,jovinelliantonella@example.com,1999-12-28,+39 3917542572,"Via Nanni, 923
+13822, Pistolesa (BI)",Borgio,14035,Ferrara,Chad,-66.598899,-95.227945
+c7f3eace-142b-4c24-854b-e4fb5e7e91ea,Donna Tedesco-Sraffa,pcasadei@example.com,1938-07-29,+39 3917542572,"Canale Baggio, 894
+32023, Rocca Pietore (BL)",Acquarica Di Lecce,60020,Agrigento,Macao,-66.6009345,-179.742327
+d7628783-44ed-4548-bba7-b5568caa327e,Tonia Tognazzi-Fiorucci,nedda95@example.org,1935-10-10,+39 3917542572,"Incrocio Pastine, 1 Piano 3
+86087, Rionero Sannitico (IS)",Santa Croce Camerina,46046,Reggio Emilia,Siria,-8.6451485,-132.252964
+26959bab-f6e7-4a50-80b2-74458a8a1f0e,Graziella Scarlatti,martino04@example.net,1977-09-10,+39 3917542572,"Viale Carducci, 9
+50144, Firenze (FI)",Ne,35124,Caserta,Bhutan,-44.2036605,-85.057497
+c025f1df-43ef-4222-99e1-02650400ca0b,Sonia Rocca,travaglioalessandra@example.org,1946-06-22,+39 3917542572,"Via Carosone, 91
+24057, Martinengo (BG)",San Costantino Calabro,21023,Ragusa,Tailandia,44.0702535,43.437441
+46f50fb8-9f5b-4ede-804f-d510b0a42ef8,Renata Nibali,spascarella@example.com,1951-06-15,+39 3917542572,"Contrada Giosuè, 57
+87016, Morano Calabro (CS)",Rovere Di Rocca Di Mezzo,55038,Monza e della Brianza,Etiopia,-89.213644,-62.409739
+bad992a3-3234-4869-a898-32e064e288ec,Stefani Botta,luciapiovani@example.org,1982-10-05,+39 3917542572,"Via Adelasia, 11 Piano 6
+67033, Pescocostanzo (AQ)",Perosa Canavese,73059,Ferrara,Islanda,-5.558303,-92.137983
+c12e1250-68e2-491f-b397-a635e7c15005,Paoletta Gregori,carneramarcantonio@example.com,1939-02-05,+39 3917542572,"Piazza Aurora, 47 Appartamento 21
+81041, Vitulazio (CE)",Tallacano,36040,Barletta-Andria-Trani,Polonia,12.050401,-96.711367
+d72ffa8a-820a-4715-a2cb-1ad593e61d56,Cassandra Liguori-Piacentini,canettaugo@example.com,1977-08-26,+39 3917542572,"Strada Antonello, 75
+10076, San Giovanni (TO)",Campiglione,89039,Bolzano,India,-76.452017,144.409005
+69a0ce92-6f9c-492d-b7ba-4269e0abaa7a,Dott. Caterina Salgari,filangierigian@example.net,1980-09-26,+39 3917542572,"Strada Corcos, 22
+14033, Castell'Alfero Stazione (AT)",Camnago Faloppio,36062,Bergamo,Costa d'Avorio,63.3555265,26.499513
+b821acae-3a8c-4a88-880b-5eeb433b7804,Valerio Iannelli-Grifeo,rominapanatta@example.org,1938-10-17,+39 3917542572,"Piazza Ivo, 7
+12030, Lagnasco (CN)",Valgrana,80031,Cremona,Canada,24.101619,-129.703940
+d72c5f67-4896-4354-a6c1-c5476e2c3366,Giuseppe Galtarossa-Mezzetta,bmaffei@example.com,1984-09-25,+39 3917542572,"Stretto Sagredo, 20 Piano 6
+10134, Torino (TO)",Molin Nuovo,33070,Bolzano,Città del Vaticano,72.595007,59.110971
+353768f0-1ed2-4509-8c98-7ae5fd6bc96d,Lidia Callegaro,gastone98@example.org,1953-08-05,+39 3917542572,"Strada Gaspare, 843 Appartamento 56
+41026, Monzone (MO)",Poggio Di Otricoli,86023,Ravenna,Messico,-23.7549915,-5.240013
+3c9f1981-29b6-401b-8ce4-02fd7704465d,Federica Catalano,alina60@example.org,1991-12-01,+39 3917542572,"Rotonda Ruggieri, 3 Piano 9
+63081, San Silvestro (AP)",Ville Sur Nus,14057,Viterbo,India,-16.753197,172.773563
+651f3344-6725-4456-a5cf-3348a8761e1c,Claudio Roncalli,iinnocenti@example.com,2003-07-27,+39 3917542572,"Piazza Gaggini, 569
+89045, Mammola (RC)",Ferrari Di Cervinara,10063,Rovigo,Niue,-39.711346,-15.247967
+8ed34b69-ba1f-4dbd-92b6-53cf785eb5dd,Sig. Gastone Gregorio,hcarfagna@example.com,1999-04-09,+39 3917542572,"Rotonda Migliaccio, 469 Piano 3
+23852, Garlate (LC)",Pellegrina,46023,Cosenza,Myanmar,-66.814457,39.984454
+80ba0ff5-99d7-43c6-bd5d-e8b595deaf63,Luciano Scotto,zluzi@example.net,1954-08-31,+39 3917542572,"Vicolo Romina, 85 Piano 1
+65131, Fontanelle (PE)",Chiasellis,01028,Trieste,Anguilla,72.5763965,-48.344125
+5e450f65-c305-448d-8731-afe920fe7761,Santino Treccani-Nonis,paolo61@example.org,1993-09-18,+39 3917542572,"Rotonda Rita, 4 Appartamento 9
+81030, Cesa (CE)",St. Kassia,38076,Bergamo,Sierra Leone,-58.394132,70.710064
+f1a6f91f-f2ca-47e9-ae7e-5d4191e51be3,Dott. Fabio Argurio,ycasalodi@example.com,1957-02-24,+39 3917542572,"Viale Rosaria, 90
+20815, Cogliate (MB)",Lodetto,23100,Livorno,Città del Vaticano,-3.1599545,24.630336
+324b05aa-46a4-4ef5-9730-6c87b6cacf7c,Dott. Amalia Monte,simonettaschiavo@example.org,1983-10-11,+39 3917542572,"Via Rensi, 23 Appartamento 70
+37059, Campagnola (VR)",Serralunga Di Crea,45021,Brescia,Etiopia,-66.929918,-58.082251
+d0eea8e4-dd15-4cd6-8f0e-3d906948cb4b,Sig. Romeo Pucci,cirodruso@example.com,1976-05-12,+39 3917542572,"Contrada Vismara, 6 Appartamento 76
+84070, Valle Dell'Angelo (SA)",Tremosine,28070,Siracusa,Olanda,-44.607932,49.270177
+f8755d26-8c0d-4fed-9de2-09df7725d08b,Sig. Salvatore Catenazzi,hchindamo@example.org,2003-01-20,+39 3917542572,"Contrada Vespa, 45
+84078, Angellara (SA)",Dego,13894,Biella,Cambogia,87.7989655,-76.297741
+ec2673a5-8059-4523-a876-5c1696f33aec,Alderano Casarin,lgabbana@example.org,1944-06-06,+39 3917542572,"Contrada Germana, 450 Piano 9
+16154, San Giovanni Battista (GE)",Saliano,33057,Viterbo,Guadalupa,-64.052511,-82.044740
+bdfc8b13-a617-4714-a1bf-55e38be0499a,Dante Cusano,gremesefiamma@example.org,1981-12-12,+39 3917542572,"Incrocio Lombardi, 5
+73055, Racale (LE)",Gallo Di Petriano,58100,Como,Regno Unito,-45.018940,-33.265072
+2c7eb809-df17-4a92-a12b-60f46fe6f146,Ugo Babati,yfantozzi@example.net,1991-11-20,+39 3917542572,"Strada Navone, 47
+37122, Verona (VR)",Pilzone,00172,Benevento,Slovenia,-7.777652,-178.303485
+145620ac-6bb4-46fe-8e96-bf4769694451,Sig. Stefano Callegaro,pellegrino94@example.com,1954-09-03,+39 3917542572,"Stretto Lodovico, 20
+08044, Jerzu (NU)",Sassello,23883,Potenza,Bolivia,-60.156503,111.524253
+ee2bc562-312f-44e0-9374-69359cd7b394,Lucia Spinelli,galileisaverio@example.org,1946-08-31,+39 3917542572,"Stretto Jolanda, 914 Appartamento 38
+86037, Palata (CB)",Vigano,28827,L'Aquila,Anguilla,35.475866,147.939683
+7738cd44-2391-4a87-b870-816748197305,Ramona Versace,lucia35@example.com,1963-08-25,+39 3917542572,"Via Canetta, 59 Piano 5
+71033, Casalnuovo Monterotaro (FG)",Settingiano,41042,Ancona,Principato di Monaco,80.8276905,-124.697041
+b279f078-c771-4e95-952a-397d69d500a4,Federigo Polizzi,pasquale56@example.net,2007-02-25,+39 3917542572,"Piazza Annalisa, 570 Piano 4
+89039, Plati' (RC)",Banzano,41034,Foggia,Sudan,51.517574,-23.630403
+74cab896-d87d-48f7-9cd9-eb9f30647a1b,Oreste Errigo,enzoperanda@example.com,1984-10-03,+39 3917542572,"Contrada Agnolo, 52 Piano 1
+83013, Mercogliano (AV)",Cermignano,12073,Ravenna,Palau,20.7850255,133.498321
+434fb4a0-03c6-45a9-b7a8-fda1cddcb891,Dott. Pierangelo Canali,yvismara@example.com,1950-07-08,+39 3917542572,"Canale Gonzaga, 52
+10153, Torino (TO)",Monteverde,06016,Verona,Saint Vincent and the Grenadines,57.723250,-117.399380
+3ea6f422-05f0-4737-9a53-b7eac12ec5c1,Vincentio Morpurgo,medicipatrizia@example.com,1969-01-01,+39 3917542572,"Canale Licia, 6 Appartamento 38
+63853, Montelparo (FM)",Termine,70018,Avellino,Uzbekistan,17.9395465,-8.911418
+c8d4b19e-67b9-4103-893a-0399e9764795,Annamaria Moneta,ermanno77@example.org,1984-05-26,+39 3917542572,"Piazza Lazzaro, 672 Appartamento 96
+80062, Meta (NA)",Piano Di Mommio,13823,Ferrara,Isole Solomon,72.6701285,-70.155734
+0b3c9167-2c3a-4b17-bb55-4c3cbe22437b,Giuliana Baglioni,jolanda75@example.org,1974-12-20,+39 3917542572,"Viale Valier, 57
+45011, Fasana Polesine (RO)",Gratosoglio,46023,Cremona,Canada,46.247088,120.869018
+36e7b70a-a740-4312-a18d-02cd9647389b,Letizia Cendron,tascamaurilio@example.com,1958-10-18,+39 3917542572,"Rotonda Pavanello, 85
+25012, Viadana (BS)",Zanano,28866,Bari,Bangladesh,17.8211705,172.289589
+8de0b075-bebf-4135-974e-b763b491d5a7,Armando Giradello,llollobrigida@example.org,1998-06-10,+39 3917542572,"Viale Vanessa, 140 Appartamento 25
+61033, Fermignano (PU)",Verrua Po,84037,Livorno,Tailandia,73.1327535,-124.364199
+bc4fe807-7583-467c-a222-e3aa85d9a03e,Ezio Campano,pascarellalolita@example.com,2003-03-04,+39 3917542572,"Vicolo Sole, 33
+83025, Borgo (AV)",Taceno,00166,Asti,Antille Olandesi,-78.810930,-54.118065
+f16b4067-3a7f-4da2-baf7-7e05e493fdb0,Eraldo Peranda,hruberto@example.com,1956-07-17,+39 3917542572,"Piazza Volta, 41 Appartamento 58
+21043, Castiglione Olona (VA)",Camerlata,07030,Massa-Carrara,Belgio,-49.5959835,19.520051
+3cf4574c-0d2d-412b-9770-f529bce70010,Maurizio Sinisi,simonettadona@example.net,1967-11-24,+39 3917542572,"Canale Marino, 1
+45030, Castelnovo Bariano (RO)",Monteviale,26041,Terni,Costa Rica,11.6810055,68.283614
+c1f2d971-f924-439b-a54e-688fb754fa42,Dott. Enzo Cuzzocrea,morroccoalessandra@example.com,1972-10-28,+39 3917542572,"Strada Michele, 94 Appartamento 9
+42035, Castelnovo Ne' Monti (RE)",Sezze,25100,Monza e della Brianza,Turkmenistan,75.6823385,150.990718
+f40101f7-19fd-4fb2-9900-190c57fb980b,Alfredo Zichichi,delfinoverri@example.org,1968-05-13,+39 3917542572,"Canale Pozzecco, 46 Piano 3
+41027, Sant'Andrea Pelago (MO)",Castiglione Mantovano,32042,Reggio Calabria,Sudan,-80.206396,-70.090977
+b0bf9dc6-9632-4091-aadf-cbe7b24bcd6f,Annibale Ruffini,ugo02@example.org,2007-03-04,+39 3917542572,"Borgo Mario, 690
+33023, Comeglians (UD)",San Donaci,81014,Ferrara,Australia,-72.2180645,-96.226588
+91ed9c18-6bbd-4d19-a1f9-13bded5f4b65,Dott. Luigi Pennetta,amletopertile@example.net,1936-08-20,+39 3917542572,"Piazza Micheletto, 45
+53015, Scalvaia (SI)",San Pietro Al Natisone,94014,Matera,Papua Nuova Guinea,-17.2146015,97.018933
+1e03793a-96d4-485e-ac98-b64bc2247cdb,Carmelo Bazzi-Gravina,manuntaermanno@example.com,1993-06-29,+39 3917542572,"Stretto Torlonia, 33 Appartamento 54
+13027, Scopa (VC)",Bricherasio,23857,Vercelli,Territorio dell'arcipelago indiano,-42.109663,117.077890
+cbf24765-9ea0-472d-9810-3b2e8bf852dd,Sandra Paoletti,raffaella55@example.net,1987-04-20,+39 3917542572,"Piazza Angelina, 4 Appartamento 93
+75023, Montalbano Jonico (MT)",Pardu Nou,09042,Mantova,Isole Norfolk,75.3102615,-46.768434
+babab60c-5b6d-4e8b-99ee-4340ec9f807f,Ranieri Giovine-Turchi,valerio85@example.org,1985-06-18,+39 3917542572,"Piazza Verga, 23 Appartamento 59
+38061, Santa Margherita (TN)",Filogaso,67100,Trapani,Panama,61.5329105,156.316473
+397f2010-c714-406f-926e-86ab1d7ad5f4,Dott. Ippazio Fiorucci,goffredoscialpi@example.net,1939-03-10,+39 3917542572,"Vicolo Pellegrini, 89 Appartamento 6
+90138, Zisa (PA)",Montecatini Val Di Nievole,80055,Cosenza,Tanzania,-13.7534945,122.562804
