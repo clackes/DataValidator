@@ -63,7 +63,6 @@ class Validatore:
             with open(f"./output/invalid/{base_name}_invalid.json", 'w', encoding='utf-8') as f:
                 json.dump(invalid_data, f, ensure_ascii=False, indent=4)
         if "csv" in self.file_path:
-            # creo un file csv con 2 colonne: data ed error
             with open(f"./output/invalid/{base_name}_invalid.csv", mode='w', encoding='utf-8', newline='') as f:
                 fieldnames = ['data', 'error']
                 writer = csv.DictWriter(f, fieldnames=fieldnames)
