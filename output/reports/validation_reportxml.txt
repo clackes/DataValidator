@@ -1,0 +1,8 @@
+=== Validation Report ===
+Data validazione: 2025-04-27 21:07:09
+
+Totale clienti validi: 40
+Totale clienti invalidi: 10
+
+--- Riepilogo errori trovati ---
+error: 10 occorrenze
