@@ -1,0 +1,59 @@
+# validator/core.py
+from models.customer_model import Customer
+from pydantic import ValidationError
+from validator.validators import csv_validator, json_validator, xml_validator, excel_validator
+from validator.io_handlers import save_validate_data
+from validator.db import save_to_sqlite
+from validator.reporting import generate_validation_report
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
+
+class Validatore:
+    def __init__(self, file_path: str, flags: dict = {}):
+        self.valid_customers = []
+        self.invalid_customers = []
+        self.file_path = file_path
+        self.flags = flags
+        self.supported_files = [".xml", ".json", ".csv", ".xlsx"]
+        self.check_filetype()
+
+    def check_filetype(self):
+        if any(filetype in self.file_path for filetype in self.supported_files):
+            print("✅ FileType supported.")
+        else:
+            print("❌ FileType not supported.")
+
+    def main(self):
+        if "xml" in self.file_path:
+            xml_validator(self)
+        if "json" in self.file_path:
+            json_validator(self)
+        if "csv" in self.file_path:
+            csv_validator(self)
+        if "xlsx" in self.file_path:
+            excel_validator(self)
+        save_validate_data(self)
+        save_to_sqlite(self)
+
+    def generate_validation_report(self, report_path):
+        generate_validation_report(self.valid_customers, self.invalid_customers, report_path)
+
+    def customer_validator(self, data: dict):
+        try:
+            customer = Customer.model_validate(data, context={'correction_flags': self.flags})
+            self.valid_customers.append(customer)
+        except ValidationError as e:
+            filtered_errors = []
+            for error in e.errors():
+                loc = error.get('loc', [])
+                field = loc[0] if loc else 'model'
+                if self.flags.get(field, True):
+                    filtered_errors.append(error['msg'])
+            if not filtered_errors:
+                customer = Customer.model_construct(**data)
+                self.valid_customers.append(customer)
+            else:
+                self.invalid_customers.append({
+                    "data": data,
+                    "error": filtered_errors
+                })

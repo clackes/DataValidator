@@ -1,8 +1,8 @@
 === Validation Report ===
-Data validazione: 2025-04-29 23:22:48
+Data validazione: 2025-04-30 23:59:01
 
-Totale clienti validi: 40
-Totale clienti invalidi: 10
+Totale clienti validi: 10
+Totale clienti invalidi: 40
 
 --- Riepilogo errori trovati ---
-error: 10 occorrenze
+Value error, Indirizzo non riconosciuto dal sistema geografico: 40 occorrenze

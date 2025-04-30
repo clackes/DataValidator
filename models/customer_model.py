@@ -1,7 +1,38 @@
-from pydantic import BaseModel, EmailStr, Field, field_validator, ValidationInfo
+#./models/customer_model.py
+
+from pydantic import BaseModel, EmailStr, Field, field_validator, model_validator, ValidationInfo
 from typing import Optional
 from datetime import date
 import re
+from geopy.geocoders import Nominatim
+from geopy.exc import GeocoderTimedOut
+
+def validate_geolocation(customer) -> None:
+    geolocator = Nominatim(user_agent="data_validator", timeout=10)
+    try:
+        full_address = f"{customer.address}, {customer.city}, {customer.state}, {customer.postal_code}, {customer.country}"
+        location = geolocator.geocode(full_address)
+        if not location:
+            raise ValueError("Indirizzo non riconosciuto dal sistema geografico")
+        lat_diff = abs(location.latitude - float(customer.latitude or 0))
+        lon_diff = abs(location.longitude - float(customer.longitude or 0))
+        if lat_diff > 0.1 or lon_diff > 0.1:
+            raise ValueError("Le coordinate geografiche non corrispondono all'indirizzo fornito.")
+    except GeocoderTimedOut:
+        raise ValueError("Timeout durante la verifica geografica.")
+
+def is_malicious_input(text: str) -> bool:
+    patterns = [
+        r"(--|/\*|\*/)",                
+        r"(select|update|delete|insert|drop|alter)",     
+        r"<script.*?>.*?</script.*?>",                  
+        r"on\w+\s*=",                                   
+        r"exec\(|eval\(|system\(",                       
+    ]
+    for pattern in patterns:
+        if re.search(pattern, text, re.IGNORECASE):
+            return True
+    return False
 
 class Customer(BaseModel):
     id: str
@@ -69,3 +100,21 @@ class Customer(BaseModel):
         if v is not None and not (-180 <= v <= 180):
             raise ValueError('La longitudine deve essere tra -180 e +180')
         return v
+
+    @model_validator(mode='after')
+    @classmethod
+    def check_malicious_fields(cls, model, info: ValidationInfo):
+        correction_flags = info.context.get('correction_flags', {}) if info.context else {}
+        for field_name, value in model.__dict__.items():
+            if isinstance(value, str) and correction_flags.get(field_name, True):
+                if is_malicious_input(value):
+                    raise ValueError(f"Valore potenzialmente pericoloso rilevato nel campo '{field_name}'")
+        return model
+    
+    @model_validator(mode='after')
+    @classmethod
+    def check_geolocation_consistency(cls, model, info: ValidationInfo):
+        flags = info.context.get("correction_flags", {})
+        if flags.get("geolocation", True):
+            validate_geolocation(model)
+        return model
