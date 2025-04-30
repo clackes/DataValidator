@@ -98,6 +98,20 @@
         "longitude": -6.361965
     },
     {
+        "id": "da671afa-1c1c-43b2-870e-b1321e27f076",
+        "name": "Eraldo Gozzano-Valmarana",
+        "email": "email_non_valida",
+        "birth_date": "3000-01-01",
+        "phone_number": "+39 3917542572",
+        "address": "Stretto Elvira, 273\n34012, Basovizza (TS)",
+        "city": "San Genesio Atesino",
+        "postal_code": "ABCDE",
+        "state": "Pistoia",
+        "country": "Tajikistan",
+        "latitude": -87.9578655,
+        "longitude": -54.587759
+    },
+    {
         "id": "26ad5da1-372d-440a-ac3b-da00c7e1ab5e",
         "name": "Carolina Rubbia",
         "email": "moresigermana@example.com",
@@ -110,6 +124,20 @@
         "country": "Togo",
         "latitude": 64.423419,
         "longitude": 101.702772
+    },
+    {
+        "id": "a4a2a54f-3833-4d8d-9129-90cad4f58d76",
+        "name": "Rosina Visintini",
+        "email": "email_non_valida",
+        "birth_date": "3000-01-01",
+        "phone_number": "+39 3917542572",
+        "address": "Vicolo Magnani, 43\n98141, Giampilieri Marina (ME)",
+        "city": "Caprioli",
+        "postal_code": "ABCDE",
+        "state": "Asti",
+        "country": "Giappone",
+        "latitude": -79.2209,
+        "longitude": -9.437987
     },
     {
         "id": "ee699fa3-2345-4406-bc2f-6ef2c2ad5161",
@@ -168,6 +196,20 @@
         "longitude": 74.061282
     },
     {
+        "id": "99ef32ca-eae9-4601-8629-32ae31abf0bd",
+        "name": "Lando Regge",
+        "email": "email_non_valida",
+        "birth_date": "3000-01-01",
+        "phone_number": "+39 3917542572",
+        "address": "Piazza Ruberto, 914\n88825, Savelli (KR)",
+        "city": "St.Pete",
+        "postal_code": "ABCDE",
+        "state": "Torino",
+        "country": "Montenegro",
+        "latitude": 42.318689,
+        "longitude": -156.40589
+    },
+    {
         "id": "90e0ea79-a787-44b2-991f-7aba01360e51",
         "name": "Dott. Paolo Norbiato",
         "email": "renzifabrizio@example.net",
@@ -224,6 +266,34 @@
         "longitude": 124.444362
     },
     {
+        "id": "402f8b63-5072-44c9-b518-e12f8315636a",
+        "name": "Michele Mazzi-Farinelli",
+        "email": "email_non_valida",
+        "birth_date": "3000-01-01",
+        "phone_number": "+39 3917542572",
+        "address": "Strada Olga, 8\n20883, Mezzago (MB)",
+        "city": "Le Regine",
+        "postal_code": "ABCDE",
+        "state": "Cosenza",
+        "country": "Olanda",
+        "latitude": -66.0040975,
+        "longitude": 128.370492
+    },
+    {
+        "id": "a017bf9a-848e-4061-b2c4-cbf89f901147",
+        "name": "Dott. Giulia Pezzali",
+        "email": "email_non_valida",
+        "birth_date": "3000-01-01",
+        "phone_number": "+39 3917542572",
+        "address": "Viale Mortati, 33\n13047, San Germano Vercellese (VC)",
+        "city": "Inarzo",
+        "postal_code": "ABCDE",
+        "state": "Pavia",
+        "country": "Costa d'Avorio",
+        "latitude": -44.4771955,
+        "longitude": 125.834881
+    },
+    {
         "id": "62c444bc-3edf-4616-b053-f1288f8727bd",
         "name": "Lidia Gussoni",
         "email": "landomoschino@example.org",
@@ -278,6 +348,34 @@
         "country": "Repubblica Ceca",
         "latitude": -64.6617935,
         "longitude": -21.347569
+    },
+    {
+        "id": "532fb55a-3525-4ddc-b368-ec15144c5837",
+        "name": "Antonio Chiaramonte",
+        "email": "email_non_valida",
+        "birth_date": "3000-01-01",
+        "phone_number": "+39 3917542572",
+        "address": "Canale Lazzaro, 27 Appartamento 4\n13861, Ailoche (BI)",
+        "city": "San Vito Di Altivole",
+        "postal_code": "ABCDE",
+        "state": "L'Aquila",
+        "country": "Saint Pierre and Miquelon",
+        "latitude": 38.8959345,
+        "longitude": -27.080544
+    },
+    {
+        "id": "894885a4-9373-4b28-b9e7-ce15236e2ce6",
+        "name": "Vincenza Sobrero",
+        "email": "email_non_valida",
+        "birth_date": "3000-01-01",
+        "phone_number": "+39 3917542572",
+        "address": "Canale Redi, 75 Appartamento 2\n17038, Villanova D'Albenga (SV)",
+        "city": "Ravi",
+        "postal_code": "ABCDE",
+        "state": "Avellino",
+        "country": "Sud Africa",
+        "latitude": 57.3509865,
+        "longitude": -137.289091
     },
     {
         "id": "2b406446-670f-4f1a-ac15-ebc6cd37c133",
@@ -348,6 +446,20 @@
         "country": "Repubblica Centrale Africana",
         "latitude": -23.5019375,
         "longitude": 49.403617
+    },
+    {
+        "id": "1c467026-16de-4d1e-81b7-89412e4aafd7",
+        "name": "Emma Vespa",
+        "email": "email_non_valida",
+        "birth_date": "3000-01-01",
+        "phone_number": "+39 3917542572",
+        "address": "Borgo Gioffre, 84\n43030, Marzolara (PR)",
+        "city": "Ceppo Morelli",
+        "postal_code": "ABCDE",
+        "state": "Matera",
+        "country": "El Salvador",
+        "latitude": 77.4680165,
+        "longitude": -45.453323
     },
     {
         "id": "31764027-3bc6-4a68-882d-9bfe8c269add",
@@ -516,6 +628,34 @@
         "country": "Bolivia",
         "latitude": -72.765961,
         "longitude": -165.526219
+    },
+    {
+        "id": "a2f2736c-6317-4b00-8be9-cd8cceab2e9c",
+        "name": "Gianmarco Verdone-Guicciardini",
+        "email": "email_non_valida",
+        "birth_date": "3000-01-01",
+        "phone_number": "+39 3917542572",
+        "address": "Piazza Ignazio, 96 Piano 5\n35026, Conselve (PD)",
+        "city": "Drapia",
+        "postal_code": "ABCDE",
+        "state": "Pordenone",
+        "country": "Heard Island and McDonald Islands",
+        "latitude": -33.660924,
+        "longitude": -40.092329
+    },
+    {
+        "id": "7d0e3134-f3cb-418a-ae58-abe7cbf04a9c",
+        "name": "Elisa Mazzacurati",
+        "email": "email_non_valida",
+        "birth_date": "3000-01-01",
+        "phone_number": "+39 3917542572",
+        "address": "Viale Cavalcanti, 4 Appartamento 8\n65126, Pescara (PE)",
+        "city": "Sandra'",
+        "postal_code": "ABCDE",
+        "state": "Massa-Carrara",
+        "country": "Qatar",
+        "latitude": 84.450293,
+        "longitude": 5.497922
     },
     {
         "id": "450b35c6-414a-46e4-9d64-c29eb12dc95f",

@@ -1,0 +1,7 @@
+=== Validation Report ===
+Data validazione: 2025-05-01 00:11:17
+
+Totale clienti validi: 50
+Totale clienti invalidi: 0
+
+--- Riepilogo errori trovati ---
