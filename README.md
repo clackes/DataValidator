@@ -20,41 +20,6 @@
 
 ---
 
-## 📁 Struttura del progetto
-
-```
-.
-├── api/                 # API REST con FastAPI
-│   └── api_endpoints.py
-├── data/                # File dati da validare + schema
-│   ├── customers.csv/json/xml/xlsx
-│   └── model_schema.json
-├── models/              # Modelli e generatore dinamico
-│   ├── base_model.py
-│   ├── model_gen.py
-│   └── model_schema.json
-├── output/              # Output della validazione
-│   ├── valid/
-│   ├── invalid/
-│   └── reports/
-├── tests/               # Test per API
-│   └── test_api.py
-├── tools/               # Script di supporto
-│   ├── fake_customergen.py
-│   ├── csvtojson.py
-│   └── csvtoxmlexcel.py
-├── validator/           # Logica di validazione
-│   ├── core.py
-│   ├── db.py
-│   ├── io_handlers.py
-│   ├── validators.py
-│   └── reporting.py
-├── main.py              # Entrypoint da CLI
-└── requirements.txt
-```
-
----
-
 ## 🚀 Come funziona
 
 ### 1. Definizione dello schema
