@@ -1,7 +1,5 @@
 
 ---
-
-```markdown
 # 🧪 DataValidator
 
 DataValidator è un'applicazione Python avanzata per la validazione, pulizia e ispezione di dati 
@@ -10,7 +8,7 @@ strutturati provenienti da file `.csv`, `.json`, `.xml`, `.xlsx`.
 ---
 
 ## ⚙️ Funzionalità principali
-
+```markdown
 - ✅ Validazione dei dati tramite modelli dinamici generati da JSON
 - 🧠 Controlli semantici, formali e geografici
 - 🔐 Protezione da input malevoli (SQL/XSS injection)
