@@ -1,4 +1,3 @@
-# validator/db.py
 import os
 import sqlite3
 import json
@@ -7,87 +6,42 @@ def save_to_sqlite(self, db_path="./output/validation_data.db"):
     os.makedirs(os.path.dirname(db_path), exist_ok=True)
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
-
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS valid_customers (
-            id TEXT PRIMARY KEY,
-            name TEXT,
-            email TEXT,
-            birth_date TEXT,
-            phone_number TEXT,
-            address TEXT,
-            city TEXT,
-            postal_code TEXT,
-            state TEXT,
-            country TEXT,
-            latitude REAL,
-            longitude REAL
-        )
-    ''')
-
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS invalid_customers (
-            id TEXT,
-            name TEXT,
-            email TEXT,
-            birth_date TEXT,
-            phone_number TEXT,
-            address TEXT,
-            city TEXT,
-            postal_code TEXT,
-            state TEXT,
-            country TEXT,
-            latitude REAL,
-            longitude REAL,
-            errors TEXT
-        )
-    ''')
-
-    for customer in self.valid_customers:
-        cursor.execute('''
-            INSERT OR REPLACE INTO valid_customers (
-                id, name, email, birth_date, phone_number, address,
-                city, postal_code, state, country, latitude, longitude
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (
-            customer.id,
-            customer.name,
-            customer.email,
-            str(customer.birth_date),
-            customer.phone_number,
-            customer.address,
-            customer.city,
-            customer.postal_code,
-            customer.state,
-            customer.country,
-            customer.latitude,
-            customer.longitude
-        ))
-
-    for item in self.invalid_customers:
-        invalid_entry = item['data']
-        errors = item['error']
-        cursor.execute('''
-            INSERT INTO invalid_customers (
-                id, name, email, birth_date, phone_number, address,
-                city, postal_code, state, country, latitude, longitude, errors
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (
-            invalid_entry.get("id"),
-            invalid_entry.get("name"),
-            invalid_entry.get("email"),
-            invalid_entry.get("birth_date"),
-            invalid_entry.get("phone_number"),
-            invalid_entry.get("address"),
-            invalid_entry.get("city"),
-            invalid_entry.get("postal_code"),
-            invalid_entry.get("state"),
-            invalid_entry.get("country"),
-            invalid_entry.get("latitude"),
-            invalid_entry.get("longitude"),
-            json.dumps(errors, ensure_ascii=False)
-        ))
-
+    if self.valid_input:
+        sample = self.valid_input[0].model_dump() if hasattr(self.valid_input[0], "model_dump") else dict(self.valid_input[0])
+        valid_fields = list(sample.keys())
+        valid_columns_sql = ",\n".join([f"{field} TEXT" for field in valid_fields])
+        cursor.execute(f'''
+            CREATE TABLE IF NOT EXISTS valid_input (
+                {valid_columns_sql}
+            )
+        ''')
+        for customer in self.valid_input:
+            data = customer.model_dump() if hasattr(customer, "model_dump") else dict(customer)
+            values = tuple(data.get(field) for field in valid_fields)
+            placeholders = ','.join(['?'] * len(valid_fields))
+            cursor.execute(f'''
+                INSERT OR REPLACE INTO valid_input ({",".join(valid_fields)})
+                VALUES ({placeholders})
+            ''', values)
+    if self.invalid_input:
+        sample_invalid = self.invalid_input[0]['data']
+        invalid_fields = list(sample_invalid.keys())
+        invalid_columns_sql = ",\n".join([f"{field} TEXT" for field in invalid_fields])
+        invalid_columns_sql += ",\nerrors TEXT"
+        cursor.execute(f'''
+            CREATE TABLE IF NOT EXISTS invalid_input (
+                {invalid_columns_sql}
+            )
+        ''')
+        for item in self.invalid_input:
+            data = item['data']
+            errors = json.dumps(item['error'], ensure_ascii=False)
+            values = tuple(data.get(field) for field in invalid_fields) + (errors,)
+            placeholders = ','.join(['?'] * (len(invalid_fields) + 1))
+            cursor.execute(f'''
+                INSERT INTO invalid_input ({",".join(invalid_fields)}, errors)
+                VALUES ({placeholders})
+            ''', values)
     conn.commit()
     conn.close()
     print(f"✅ Dati salvati su database SQLite in: {db_path}")

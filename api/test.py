@@ -5,27 +5,13 @@ import json
 
 BASE_URL = "http://127.0.0.1:8000"
 
-
-def test_upload_file():
+def test_upload_file(flags):
     with open("./data/customers.json", "rb") as f:
-        response = requests.post(f"{BASE_URL}/upload", files={"file": f})
+        response = requests.post(
+            f"{BASE_URL}/upload", 
+            files={"file": f},
+            data={"flags_json": json.dumps(flags)})
     print("Upload:", response.status_code, response.json())
-
-
-def test_validate_file():
-    flags = {
-        "birth_date": False,
-        "postal_code": False
-    }
-    response = requests.post(
-        f"{BASE_URL}/validate",
-        data={
-            "filename": "customers.json",
-            "flags_json": json.dumps(flags)
-        }
-    )
-    print("Validate File:", response.status_code, response.json())
-
 
 def test_validate_record():
     record = {
@@ -52,8 +38,17 @@ def test_validate_record():
     )
     print("Validate Record:", response.status_code, response.json())
 
+def test_load_schema():
+    with open("./models/model_schema.json", "rb") as f:
+        response = requests.post(f"{BASE_URL}/schema/load", files={"schema_file": f})
+    print("Load Schema:", response.status_code, response.json())
 
 if __name__ == "__main__":
-    test_upload_file()
-    test_validate_file()
+    test_load_schema( )
+    test_upload_file({
+        #"birth_date": False,
+        #"email": False,
+        #"postal_code": False,
+        "geolocation": False
+    })
     test_validate_record()

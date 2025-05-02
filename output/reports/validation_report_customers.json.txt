@@ -1,7 +1,10 @@
 === Validation Report ===
-Data validazione: 2025-05-01 00:11:17
+Data validazione: 2025-05-02 12:37:00
 
-Totale clienti validi: 50
-Totale clienti invalidi: 0
+Totale clienti validi: 40
+Totale clienti invalidi: 10
 
 --- Riepilogo errori trovati ---
+value is not a valid email address: An email address must have an @-sign.: 10 occorrenze
+Value error, Data di nascita deve essere nel passato: 10 occorrenze
+Input should be a valid integer, unable to parse string as an integer: 10 occorrenze

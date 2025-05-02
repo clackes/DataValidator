@@ -1,0 +1,8 @@
+{
+  "Customer": {
+    "id": "str",
+    "name": "str",
+    "email": "EmailStr",
+    "birth_date": "date"
+  }
+}

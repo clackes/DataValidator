@@ -1,25 +1,26 @@
-#./models/customer_model.py
+#./models/base.py
 
-from pydantic import BaseModel, EmailStr, Field, field_validator, model_validator, ValidationInfo
+from pydantic import field_validator, model_validator, ValidationInfo
+from models.model_gen import BaseLoaded
 from typing import Optional
 from datetime import date
 import re
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut
 
-def validate_geolocation(customer) -> None:
-    geolocator = Nominatim(user_agent="data_validator", timeout=10)
-    try:
-        full_address = f"{customer.address}, {customer.city}, {customer.state}, {customer.postal_code}, {customer.country}"
-        location = geolocator.geocode(full_address)
-        if not location:
-            raise ValueError("Indirizzo non riconosciuto dal sistema geografico")
-        lat_diff = abs(location.latitude - float(customer.latitude or 0))
-        lon_diff = abs(location.longitude - float(customer.longitude or 0))
-        if lat_diff > 0.1 or lon_diff > 0.1:
-            raise ValueError("Le coordinate geografiche non corrispondono all'indirizzo fornito.")
-    except GeocoderTimedOut:
-        raise ValueError("Timeout durante la verifica geografica.")
+#def validate_geolocation(user) -> None:
+#    geolocator = Nominatim(user_agent="data_validator", timeout=10)
+#    try:
+#        full_address = f"{user.address}, {user.city}, {user.state}, {user.postal_code}, {user.country}"
+#        location = geolocator.geocode(full_address)
+#        if not location:
+#            raise ValueError("Indirizzo non riconosciuto dal sistema geografico")
+#        lat_diff = abs(location.latitude - float(user.latitude or 0))
+#        lon_diff = abs(location.longitude - float(user.longitude or 0))
+#        if lat_diff > 0.1 or lon_diff > 0.1:
+#            raise ValueError("Le coordinate geografiche non corrispondono all'indirizzo fornito.")
+#    except GeocoderTimedOut:
+#        raise ValueError("Timeout durante la verifica geografica.")
 
 def is_malicious_input(text: str) -> bool:
     patterns = [
@@ -34,23 +35,12 @@ def is_malicious_input(text: str) -> bool:
             return True
     return False
 
-class Customer(BaseModel):
-    id: str
-    name: str = Field(..., min_length=1)
-    email: EmailStr
-    birth_date: date
-    phone_number: Optional[str] = None
-    address: Optional[str] = None
-    city: Optional[str] = None
-    postal_code: Optional[int] = None
-    state: Optional[str] = None
-    country: Optional[str] = None
-    latitude: Optional[float] = None
-    longitude: Optional[float] = None
-
-    @field_validator('phone_number')
+class ModelValidator(BaseLoaded):
+    @field_validator('phone_number', check_fields=False)
     @classmethod
     def validate_phone_number(cls, v: Optional[str], info: ValidationInfo) -> Optional[str]:
+        if v is None:
+            return v 
         correction_flags = info.context.get('correction_flags', {})
         if not correction_flags.get('phone_number', True):
             return v
@@ -61,9 +51,11 @@ class Customer(BaseModel):
             raise ValueError('Numero di telefono non valido. Deve essere 9-15 cifre e può iniziare con +')
         return cleaned
 
-    @field_validator('birth_date')
+    @field_validator('birth_date', check_fields=False)
     @classmethod
     def validate_birth_date(cls, v: date, info: ValidationInfo) -> date:
+        if v is None:
+            return v 
         correction_flags = info.context.get('correction_flags', {})
         if not correction_flags.get('birth_date', True):
             return v
@@ -71,9 +63,11 @@ class Customer(BaseModel):
             raise ValueError('Data di nascita deve essere nel passato')
         return v
 
-    @field_validator('name')
+    @field_validator('name', check_fields=False)
     @classmethod
     def validate_name(cls, v: str, info: ValidationInfo) -> str:
+        if v is None:
+            return v 
         correction_flags = info.context.get('correction_flags', {})
         if not correction_flags.get('name', True):
             return v
@@ -81,9 +75,11 @@ class Customer(BaseModel):
             raise ValueError('Il nome deve contenere almeno un nome e un cognome (es: Mario Rossi)')
         return v
 
-    @field_validator('latitude')
+    @field_validator('latitude', check_fields=False)
     @classmethod
     def validate_latitude(cls, v: Optional[float], info: ValidationInfo) -> Optional[float]:
+        if v is None:
+            return v 
         correction_flags = info.context.get('correction_flags', {})
         if not correction_flags.get('latitude', True):
             return v
@@ -91,9 +87,11 @@ class Customer(BaseModel):
             raise ValueError('La latitudine deve essere tra -90 e +90')
         return v
 
-    @field_validator('longitude')
+    @field_validator('longitude', check_fields=False)
     @classmethod
     def validate_longitude(cls, v: Optional[float], info: ValidationInfo) -> Optional[float]:
+        if v is None:
+            return v 
         correction_flags = info.context.get('correction_flags', {})
         if not correction_flags.get('longitude', True):
             return v
@@ -111,10 +109,10 @@ class Customer(BaseModel):
                     raise ValueError(f"Valore potenzialmente pericoloso rilevato nel campo '{field_name}'")
         return model
     
-    @model_validator(mode='after')
-    @classmethod
-    def check_geolocation_consistency(cls, model, info: ValidationInfo):
-        flags = info.context.get("correction_flags", {})
-        if flags.get("geolocation", True):
-            validate_geolocation(model)
-        return model
+    #@model_validator(mode='after')
+    #@classmethod
+    #def check_geolocation_consistency(cls, model, info: ValidationInfo):
+    #    flags = info.context.get("correction_flags", {})
+    #    if flags.get("geolocation", True):
+    #        validate_geolocation(model)
+    #    return model
