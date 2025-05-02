@@ -106,17 +106,6 @@ Esegue test automatici su:
 pip install -r requirements.txt
 ```
 
----
-
-## 💡 To-do / Roadmap
-
-- [ ] Caricamento modelli via API
-- [ ] Interfaccia web (React)
-- [ ] Logging avanzato e tracciamento
-- [ ] Supporto multiutente
-
----
-
 ## 🤝 Autore
 
 Creato con passione da clackes  
