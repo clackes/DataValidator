@@ -43,7 +43,11 @@ Viene generato dinamicamente un modello `BaseCustomer`.
 ---
 
 ### 2. Esecuzione via CLI
+#### 📦 Requisiti
 
+```bash
+pip install -r requirements.txt
+```
 ```bash
 python main.py
 ```
@@ -99,12 +103,6 @@ Esegue test automatici su:
 - 🧩 Estendibilità semplice con nuovi validatori
 
 ---
-
-## 📦 Requisiti
-
-```bash
-pip install -r requirements.txt
-```
 
 ## 🤝 Autore
 
