@@ -4,7 +4,8 @@
 ```markdown
 # 🧪 DataValidator
 
-**DataValidator** è un'applicazione Python avanzata per la validazione, pulizia e ispezione di dati strutturati provenienti da file `.csv`, `.json`, `.xml`, `.xlsx`.
+DataValidator è un'applicazione Python avanzata per la validazione, pulizia e ispezione di dati 
+strutturati provenienti da file `.csv`, `.json`, `.xml`, `.xlsx`.
 
 ---
 
@@ -25,7 +26,7 @@
 ### 1. Definizione dello schema
 
 Nel file `data/model_schema.json` definisci la struttura dei modelli. Esempio:
-
+```
 ```json
 {
   "Customer": {
