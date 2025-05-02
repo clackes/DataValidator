@@ -18,7 +18,7 @@ strutturati provenienti da file `.csv`, `.json`, `.xml`, `.xlsx`.
 - 🗃️ Persistenza dei dati in SQLite
 - 🌐 API REST per uso via web/frontend
 - 🧪 Test automatici delle API
-
+```
 ---
 
 ## 🚀 Come funziona
@@ -26,7 +26,7 @@ strutturati provenienti da file `.csv`, `.json`, `.xml`, `.xlsx`.
 ### 1. Definizione dello schema
 
 Nel file `data/model_schema.json` definisci la struttura dei modelli. Esempio:
-```
+
 ```json
 {
   "Customer": {
