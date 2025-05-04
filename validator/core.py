@@ -3,7 +3,7 @@ from models.base_model import ModelValidator
 from pydantic import ValidationError
 from validator.validators import csv_validator, json_validator, excel_validator #,xml_validator
 from validator.io_handlers import save_validate_data
-from validator.db import save_to_sqlite
+from validator.db import save_to_db
 from validator.reporting import generate_validation_report
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -33,7 +33,7 @@ class Validatore:
         if "xlsx" in self.file_path:
             excel_validator(self)
         save_validate_data(self)
-        save_to_sqlite(self)
+        save_to_db(self)
 
     def generate_validation_report(self, report_path):
         generate_validation_report(self.valid_input, self.invalid_input, report_path)

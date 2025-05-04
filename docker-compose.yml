@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  datavalidator:
+    build: .
+    container_name: datavalidator_app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: postgres:14
+    container_name: validator_postgres
+    environment:
+      POSTGRES_USER: clackes
+      POSTGRES_PASSWORD: TiffanyVerga44$
+      POSTGRES_DB: validator_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

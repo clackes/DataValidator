@@ -32,8 +32,14 @@ Nel file `data/model_schema.json` definisci la struttura dei modelli. Esempio:
     "name": "str",
     "email": "EmailStr",
     "birth_date": "date",
+    "phone_number": "Optional[str]",
+    "address": "Optional[str]",
+    "city": "Optional[str]",
     "postal_code": "Optional[int]",
-    "latitude": "Optional[float]"
+    "state": "Optional[str]",
+    "country": "Optional[str]",
+    "latitude": "Optional[float]",
+    "longitude": "Optional[float]"
   }
 }
 ```
