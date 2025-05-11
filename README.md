@@ -49,6 +49,8 @@ Viene generato dinamicamente un modello `BaseCustomer`.
 ---
 
 ### 2. Esecuzione via Docker
+Rinominare e modificare il file `.env.example` in `.env`
+rinominare e modificare il file `docker-compose-example.yml` in `docker-compose.yml`
 Per avviare il contenitore Docker
 ```bash
 docker-compose up --build -d  
