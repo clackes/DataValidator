@@ -1,101 +1,101 @@
 id,name,email,birth_date,phone_number,address,city,postal_code,state,country,latitude,longitude
-ef17d350-c334-43f2-b065-158f5a0d84ab,Teresa Odescalchi,camillasabbatini@example.net,1976-11-22,+393917542572,"Viale Dino, 83 Piano 3
+ef17d350-c334-43f2-b065-158f5a0d84ab,Teresa Odescalchi,camillasabbatini@example.net,1976-11-22,+39 3917542572,"Viale Dino, 83 Piano 3
 27100, Pavia (PV)",Campo Nell'Elba,9124,Viterbo,Antartide (territori a sud del 60° parallelo),-51.400494,162.384707
-fa4e4572-b4be-4647-b6f9-7ffbfa194084,Sig. Salvi Padovano,wdetti@example.net,1989-03-29,+393917542572,"Via Serena, 980
+fa4e4572-b4be-4647-b6f9-7ffbfa194084,Sig. Salvi Padovano,wdetti@example.net,1989-03-29,+39 3917542572,"Via Serena, 980
 64020, Ripattoni (TE)",Campagna Lupia,32042,Benevento,San Bartolomeo,28.5582745,-175.141663
-3ba9e1c4-3bb4-4ae7-a0ff-4bc835ab1962,Telemaco Modiano,cassandrapacomio@example.org,1999-06-04,+393917542572,"Contrada Bandello, 53
+3ba9e1c4-3bb4-4ae7-a0ff-4bc835ab1962,Telemaco Modiano,cassandrapacomio@example.org,1999-06-04,+39 3917542572,"Contrada Bandello, 53
 09121, Cagliari (CA)",Montelibretti,50022,Latina,Bahamas,-78.5655585,-28.814058
-610691af-866f-4f64-833b-5414e4086494,Giuseppe Santi,ciciliadaria@example.net,1966-09-04,+393917542572,"Contrada Daniele, 273
+610691af-866f-4f64-833b-5414e4086494,Giuseppe Santi,ciciliadaria@example.net,1966-09-04,+39 3917542572,"Contrada Daniele, 273
 29010, Casaliggio (PC)",Codigoro,63821,Piacenza,Nuova Caledonia,-13.3143365,-21.55323
-5e7ef87c-efe6-4fa8-b1ad-a40e1d0bb8e7,Amanda Fittipaldi,raffaellino36@example.org,1950-12-29,+393917542572,"Viale Gaspare, 772 Appartamento 73
+5e7ef87c-efe6-4fa8-b1ad-a40e1d0bb8e7,Amanda Fittipaldi,raffaellino36@example.org,1950-12-29,+39 3917542572,"Viale Gaspare, 772 Appartamento 73
 33047, Cerneglons (UD)",Cesacastina,34100,Carbonia-Iglesias,Irlanda,-15.6273665,41.483843
-c848e2c0-ea3c-4dd0-8d1a-24c6e288affa,Sophia Contarini,michele54@example.net,1939-04-23,+393917542572,"Incrocio Rocca, 81
+c848e2c0-ea3c-4dd0-8d1a-24c6e288affa,Sophia Contarini,michele54@example.net,1939-04-23,+39 3917542572,"Incrocio Rocca, 81
 34137, Trieste (TS)",Pietragalla,84042,Viterbo,Finlandia,-8.069193,-111.267512
-870dc558-5207-4b75-993a-7594c262079a,Diana Capone-Michelangeli,xeco@example.org,1977-03-17,+393917542572,"Rotonda Osvaldo, 70
+870dc558-5207-4b75-993a-7594c262079a,Diana Capone-Michelangeli,xeco@example.org,1977-03-17,+39 3917542572,"Rotonda Osvaldo, 70
 83051, Nusco (AV)",Lonigo,95019,Livorno,Emirati Arabi Uniti,65.6829235,-6.361965
 da671afa-1c1c-43b2-870e-b1321e27f076,Eraldo Gozzano-Valmarana,email_non_valida,3000-01-01,+39 3917542572,"Stretto Elvira, 273
 34012, Basovizza (TS)",San Genesio Atesino,ABCDE,Pistoia,Tajikistan,-87.9578655,-54.587759
-26ad5da1-372d-440a-ac3b-da00c7e1ab5e,Carolina Rubbia,moresigermana@example.com,1990-05-21,+393917542572,"Piazza Rembrandt, 93 Piano 0
+26ad5da1-372d-440a-ac3b-da00c7e1ab5e,Carolina Rubbia,moresigermana@example.com,1990-05-21,+39 3917542572,"Piazza Rembrandt, 93 Piano 0
 98164, Messina (ME)",Tils,60020,Alessandria,Togo,64.423419,101.702772
 a4a2a54f-3833-4d8d-9129-90cad4f58d76,Rosina Visintini,email_non_valida,3000-01-01,+39 3917542572,"Vicolo Magnani, 43
 98141, Giampilieri Marina (ME)",Caprioli,ABCDE,Asti,Giappone,-79.220900,-9.437987
-ee699fa3-2345-4406-bc2f-6ef2c2ad5161,Gloria Pasolini,zfallaci@example.com,2005-11-10,+393917542572,"Stretto Nedda, 489 Appartamento 72
+ee699fa3-2345-4406-bc2f-6ef2c2ad5161,Gloria Pasolini,zfallaci@example.com,2005-11-10,+39 3917542572,"Stretto Nedda, 489 Appartamento 72
 23880, California (LC)",Ciavolotto,9027,Ancona,Saint Lucia,-55.4257825,126.134704
-8ca362dd-26f2-4cb6-b420-3b44623bb74e,Donatello Condoleo,ferdinandotravaglia@example.org,2003-06-27,+393917542572,"Incrocio Sandra, 32
+8ca362dd-26f2-4cb6-b420-3b44623bb74e,Donatello Condoleo,ferdinandotravaglia@example.org,2003-06-27,+39 3917542572,"Incrocio Sandra, 32
 92020, Villafranca Sicula (AG)",Sampeyre,70054,Enna,Bahamas,-62.4747815,135.00067
-32f33356-8f00-4cb1-b04f-8725eed35428,Annunziata Monduzzi,hfanucci@example.com,1949-09-03,+393917542572,"Rotonda Amadeo, 456
+32f33356-8f00-4cb1-b04f-8725eed35428,Annunziata Monduzzi,hfanucci@example.com,1949-09-03,+39 3917542572,"Rotonda Amadeo, 456
 36045, Almisano (VI)",Valas,34075,Savona,Cuba,-21.2953745,114.961425
-da3e605e-423f-4b22-b407-a2ed4d3bddea,Isabella Battaglia,gioachinoantelami@example.com,1953-06-05,+393917542572,"Contrada Vittoria, 186 Piano 2
+da3e605e-423f-4b22-b407-a2ed4d3bddea,Isabella Battaglia,gioachinoantelami@example.com,1953-06-05,+39 3917542572,"Contrada Vittoria, 186 Piano 2
 47832, Sant'Andrea In Casale (RN)",Sonnino,36036,Aosta,Oman,-66.431689,74.061282
 99ef32ca-eae9-4601-8629-32ae31abf0bd,Lando Regge,email_non_valida,3000-01-01,+39 3917542572,"Piazza Ruberto, 914
 88825, Savelli (KR)",St.Pete,ABCDE,Torino,Montenegro,42.318689,-156.405890
-90e0ea79-a787-44b2-991f-7aba01360e51,Dott. Paolo Norbiato,renzifabrizio@example.net,1945-12-26,+393917542572,"Canale Bernardo, 650 Appartamento 84
+90e0ea79-a787-44b2-991f-7aba01360e51,Dott. Paolo Norbiato,renzifabrizio@example.net,1945-12-26,+39 3917542572,"Canale Bernardo, 650 Appartamento 84
 21047, Saronno (VA)",Sferracavallo,20058,Belluno,Barbados,-5.8369465,-80.07161
-915529c9-8cbe-44ad-84c2-c36d5cef891d,Gaspare Morrocco,kzaccardo@example.org,1979-01-21,+393917542572,"Piazza Letta, 422
+915529c9-8cbe-44ad-84c2-c36d5cef891d,Gaspare Morrocco,kzaccardo@example.org,1979-01-21,+39 3917542572,"Piazza Letta, 422
 15011, Acqui Terme (AL)",Rosa',31033,Bolzano,Cambogia,59.5587095,176.047315
-448f1676-9074-4c7b-8cad-accf6038408d,Susanna Sokolov,turchivittoria@example.net,1972-11-15,+393917542572,"Canale Parisi, 66
+448f1676-9074-4c7b-8cad-accf6038408d,Susanna Sokolov,turchivittoria@example.net,1972-11-15,+39 3917542572,"Canale Parisi, 66
 89133, Cannavo' (RC)",Bosa Marina,96017,L'Aquila,Eritrea,16.087387,-48.823362
-e43ad50a-20ba-43d2-9bff-ce4306c41e61,Germana Campise,dcanetta@example.com,1974-10-11,+393917542572,"Canale Bonino, 734 Appartamento 3
+e43ad50a-20ba-43d2-9bff-ce4306c41e61,Germana Campise,dcanetta@example.com,1974-10-11,+39 3917542572,"Canale Bonino, 734 Appartamento 3
 23871, Lomagna (LC)",Villa Col Dei Canali,26846,Bergamo,Ghana,-29.0505695,124.444362
 402f8b63-5072-44c9-b518-e12f8315636a,Michele Mazzi-Farinelli,email_non_valida,3000-01-01,+39 3917542572,"Strada Olga, 8
 20883, Mezzago (MB)",Le Regine,ABCDE,Cosenza,Olanda,-66.0040975,128.370492
 a017bf9a-848e-4061-b2c4-cbf89f901147,Dott. Giulia Pezzali,email_non_valida,3000-01-01,+39 3917542572,"Viale Mortati, 33
 13047, San Germano Vercellese (VC)",Inarzo,ABCDE,Pavia,Costa d'Avorio,-44.4771955,125.834881
-62c444bc-3edf-4616-b053-f1288f8727bd,Lidia Gussoni,landomoschino@example.org,1956-03-05,+393917542572,"Contrada Silvia, 679 Appartamento 4
+62c444bc-3edf-4616-b053-f1288f8727bd,Lidia Gussoni,landomoschino@example.org,1956-03-05,+39 3917542572,"Contrada Silvia, 679 Appartamento 4
 45024, Fiesso Umbertiano (RO)",Grand Villa,14014,Massa-Carrara,Reunion,-47.78306,111.413035
-d1036fbe-b1a8-473c-b624-5c7b18aab7ec,Dott. Fiamma Ferraris,ugorandazzo@example.net,1955-05-30,+393917542572,"Incrocio Borromini, 4 Piano 2
+d1036fbe-b1a8-473c-b624-5c7b18aab7ec,Dott. Fiamma Ferraris,ugorandazzo@example.net,1955-05-30,+39 3917542572,"Incrocio Borromini, 4 Piano 2
 02014, San Liberato (RI)",Montecenere,73018,Avellino,Canada,0.819171,-156.662572
-18b2f1ca-3e5c-4100-9008-3cdbd29ba2d7,Gastone Bottigliero-Pininfarina,salvatoreinteriano@example.org,1944-01-06,+393917542572,"Stretto Nico, 43 Piano 8
+18b2f1ca-3e5c-4100-9008-3cdbd29ba2d7,Gastone Bottigliero-Pininfarina,salvatoreinteriano@example.org,1944-01-06,+39 3917542572,"Stretto Nico, 43 Piano 8
 80028, Grumo Nevano (NA)",Terzo La Pieve,31018,La Spezia,Haiti,-71.1906045,-77.474578
-d3e806ec-9750-496a-858d-52543babd020,Corrado Nordio,qpertile@example.com,1979-03-03,+393917542572,"Stretto Paloma, 5
+d3e806ec-9750-496a-858d-52543babd020,Corrado Nordio,qpertile@example.com,1979-03-03,+39 3917542572,"Stretto Paloma, 5
 42042, Fabbrico (RE)",Caltignaga,20058,Trieste,Repubblica Ceca,-64.6617935,-21.347569
 532fb55a-3525-4ddc-b368-ec15144c5837,Antonio Chiaramonte,email_non_valida,3000-01-01,+39 3917542572,"Canale Lazzaro, 27 Appartamento 4
 13861, Ailoche (BI)",San Vito Di Altivole,ABCDE,L'Aquila,Saint Pierre and Miquelon,38.8959345,-27.080544
 894885a4-9373-4b28-b9e7-ce15236e2ce6,Vincenza Sobrero,email_non_valida,3000-01-01,+39 3917542572,"Canale Redi, 75 Appartamento 2
 17038, Villanova D'Albenga (SV)",Ravi,ABCDE,Avellino,Sud Africa,57.3509865,-137.289091
-2b406446-670f-4f1a-ac15-ebc6cd37c133,Dott. Gelsomina Finzi,gcarnera@example.com,1949-09-17,+393917542572,"Via Boccaccio, 581
+2b406446-670f-4f1a-ac15-ebc6cd37c133,Dott. Gelsomina Finzi,gcarnera@example.com,1949-09-17,+39 3917542572,"Via Boccaccio, 581
 23802, Carenno (LC)",Alfano,41058,Vibo Valentia,San Bartolomeo,-65.815717,122.847538
-8cb83c55-d87e-4192-a763-770dd53c1990,Raffaella Malenchini,evangelistamalaparte@example.org,1941-08-08,+393917542572,"Incrocio Lilla, 3
+8cb83c55-d87e-4192-a763-770dd53c1990,Raffaella Malenchini,evangelistamalaparte@example.org,1941-08-08,+39 3917542572,"Incrocio Lilla, 3
 80122, Chiaia (NA)",Poggio Nativo,24061,Varese,Città del Vaticano,-79.5666915,-162.883894
-cee6bb59-9435-491f-9dc8-52889b7d8517,Sig. Massimo Papetti,toni48@example.net,1977-04-16,+393917542572,"Vicolo Caracciolo, 8 Appartamento 4
+cee6bb59-9435-491f-9dc8-52889b7d8517,Sig. Massimo Papetti,toni48@example.net,1977-04-16,+39 3917542572,"Vicolo Caracciolo, 8 Appartamento 4
 07015, Padria (SS)",Certosa Di Pavia,95017,Cremona,Saint Martin,63.0471215,-116.767501
-e945388c-66fc-48ae-ba8d-2062e9d06db7,Luigi Tozzo,olga89@example.org,1950-08-12,+393917542572,"Contrada Paola, 28
+e945388c-66fc-48ae-ba8d-2062e9d06db7,Luigi Tozzo,olga89@example.org,1950-08-12,+39 3917542572,"Contrada Paola, 28
 72024, San Cosimo Alla Macchia (BR)",Carinola,63842,Caltanissetta,Uruguay,23.819154,162.852376
-4cbaad4d-53b8-4261-938e-a7f3ec0a967a,Giada Liguori,xaloisio@example.org,1998-06-18,+393917542572,"Incrocio Bonolis, 11 Appartamento 36
+4cbaad4d-53b8-4261-938e-a7f3ec0a967a,Giada Liguori,xaloisio@example.org,1998-06-18,+39 3917542572,"Incrocio Bonolis, 11 Appartamento 36
 56010, Uliveto Terme (PI)",Gomago,33026,Novara,Repubblica Centrale Africana,-23.5019375,49.403617
 1c467026-16de-4d1e-81b7-89412e4aafd7,Emma Vespa,email_non_valida,3000-01-01,+39 3917542572,"Borgo Gioffre, 84
 43030, Marzolara (PR)",Ceppo Morelli,ABCDE,Matera,El Salvador,77.4680165,-45.453323
-31764027-3bc6-4a68-882d-9bfe8c269add,Mariano Capecchi,scamuccini@example.com,1951-12-03,+393917542572,"Canale Vittorio, 23
+31764027-3bc6-4a68-882d-9bfe8c269add,Mariano Capecchi,scamuccini@example.com,1951-12-03,+39 3917542572,"Canale Vittorio, 23
 05039, Stroncone (TR)",Prata Di Principato Ultra,33038,Lodi,Indonesia,-38.158349,-4.326414
-484997e7-94db-4182-822e-d652759cfd21,Fausto Cremonesi-Bazzi,babatoantonietta@example.org,1962-07-26,+393917542572,"Stretto Smirnoff, 62
+484997e7-94db-4182-822e-d652759cfd21,Fausto Cremonesi-Bazzi,babatoantonietta@example.org,1962-07-26,+39 3917542572,"Stretto Smirnoff, 62
 21028, Travedona Monate (VA)",Zogno,20883,Monza e della Brianza,Nepal,-58.965204,-101.852686
-23d7a08a-d080-4a08-97df-f75f23505842,Romana Franscini,rosa54@example.com,1963-04-08,+393917542572,"Piazza Leopardi, 3 Appartamento 11
+23d7a08a-d080-4a08-97df-f75f23505842,Romana Franscini,rosa54@example.com,1963-04-08,+39 3917542572,"Piazza Leopardi, 3 Appartamento 11
 00060, Terrazze (RM)",Sant'Agata Sui Due Golfi,80023,Verona,Wallis and Futuna,-15.8206945,165.394583
-4f4a53fe-3635-4d86-bd32-7f068f7ad686,Luchino Battelli,pliguori@example.com,1994-10-24,+393917542572,"Strada Lucchesi, 40 Piano 5
+4f4a53fe-3635-4d86-bd32-7f068f7ad686,Luchino Battelli,pliguori@example.com,1994-10-24,+39 3917542572,"Strada Lucchesi, 40 Piano 5
 40129, Bologna (BO)",Campione Del Garda,13833,Teramo,Macao,-41.9713335,29.974287
-04e38553-8777-497e-9731-d46f4029abea,Mauro Marenzio,mariatomasetti@example.com,1969-03-27,+393917542572,"Rotonda Guglielmo, 35 Appartamento 84
+04e38553-8777-497e-9731-d46f4029abea,Mauro Marenzio,mariatomasetti@example.com,1969-03-27,+39 3917542572,"Rotonda Guglielmo, 35 Appartamento 84
 33090, Vito D'Asio (PN)",St.Johann In Ahrnta,20881,Ravenna,Paraguay,-51.750729,-147.165412
-67088c78-cebe-41e0-b9b7-9d05ae5aaef7,Vito Errani,osismondi@example.org,1978-12-19,+393917542572,"Contrada Maccanelli, 8
+67088c78-cebe-41e0-b9b7-9d05ae5aaef7,Vito Errani,osismondi@example.org,1978-12-19,+39 3917542572,"Contrada Maccanelli, 8
 29027, San Polo (PC)",Riana Di Monchio,85055,Salerno,Cina,66.939618,-96.039219
-a83b4fe0-80ce-4e5a-aa1c-081831e09129,Pierina Grifeo-Pizziol,danteroncalli@example.com,1998-12-23,+393917542572,"Incrocio Fuseli, 40 Appartamento 6
+a83b4fe0-80ce-4e5a-aa1c-081831e09129,Pierina Grifeo-Pizziol,danteroncalli@example.com,1998-12-23,+39 3917542572,"Incrocio Fuseli, 40 Appartamento 6
 09170, Nuraxinieddu (OR)",Cortenuova,41013,Vicenza,Micronesia,43.4465045,-152.36172
-4e28d7e2-ae7e-4f3e-845a-065ca7d57375,Dott. Valeria Gianvecchio,ansaldocaruso@example.org,2006-04-08,+393917542572,"Borgo Gioele, 7
+4e28d7e2-ae7e-4f3e-845a-065ca7d57375,Dott. Valeria Gianvecchio,ansaldocaruso@example.org,2006-04-08,+39 3917542572,"Borgo Gioele, 7
 16144, Genova (GE)",Parre,73015,Olbia-Tempio,Rwanda,9.9856185,-109.890659
-c1721aa6-8f67-4381-8d0d-a36ba8962b84,Gemma Legnante,azegliofantozzi@example.com,1936-09-03,+393917542572,"Viale Melina, 95
+c1721aa6-8f67-4381-8d0d-a36ba8962b84,Gemma Legnante,azegliofantozzi@example.com,1936-09-03,+39 3917542572,"Viale Melina, 95
 44124, Ferrara (FE)",Girla,1039,Torino,Nigeria,62.124366,135.943977
-19dfce9a-c67f-425c-b242-1227c7f2e363,Adelmo Vecellio,sonninocostanzo@example.com,1963-01-28,+393917542572,"Piazza Milena, 79 Appartamento 3
+19dfce9a-c67f-425c-b242-1227c7f2e363,Adelmo Vecellio,sonninocostanzo@example.com,1963-01-28,+39 3917542572,"Piazza Milena, 79 Appartamento 3
 20088, Rosate (MI)",Piccolino,51015,Barletta-Andria-Trani,Lituania,72.756122,-114.940272
-0df0e25c-27eb-4263-8ca6-bc2d5aa073c9,Rosaria Flaiano-Petruzzi,silvestrorighi@example.net,1995-01-25,+393917542572,"Contrada Rosina, 44 Appartamento 5
+0df0e25c-27eb-4263-8ca6-bc2d5aa073c9,Rosaria Flaiano-Petruzzi,silvestrorighi@example.net,1995-01-25,+39 3917542572,"Contrada Rosina, 44 Appartamento 5
 02015, Cittaducale (RI)",Bazzana,10093,Torino,Niue,-43.4236485,176.12513
-9320fae8-1b1a-44d2-8016-c8b84783a462,Enrico Guidotti,oreste21@example.com,1954-10-10,+393917542572,"Contrada Trussardi, 27 Appartamento 36
+9320fae8-1b1a-44d2-8016-c8b84783a462,Enrico Guidotti,oreste21@example.com,1954-10-10,+39 3917542572,"Contrada Trussardi, 27 Appartamento 36
 60038, San Paolo Di Jesi (AN)",Camigliano,16124,Barletta-Andria-Trani,Bolivia,-72.765961,-165.526219
 a2f2736c-6317-4b00-8be9-cd8cceab2e9c,Gianmarco Verdone-Guicciardini,email_non_valida,3000-01-01,+39 3917542572,"Piazza Ignazio, 96 Piano 5
 35026, Conselve (PD)",Drapia,ABCDE,Pordenone,Heard Island and McDonald Islands,-33.660924,-40.092329
 7d0e3134-f3cb-418a-ae58-abe7cbf04a9c,Elisa Mazzacurati,email_non_valida,3000-01-01,+39 3917542572,"Viale Cavalcanti, 4 Appartamento 8
 65126, Pescara (PE)",Sandra',ABCDE,Massa-Carrara,Qatar,84.450293,5.497922
-450b35c6-414a-46e4-9d64-c29eb12dc95f,Maurilio Brenna,ftomasetti@example.net,1972-11-11,+393917542572,"Viale Lerner, 186
+450b35c6-414a-46e4-9d64-c29eb12dc95f,Maurilio Brenna,ftomasetti@example.net,1972-11-11,+39 3917542572,"Viale Lerner, 186
 21041, Albizzate (VA)",Mirabello Sannitico,7028,Ascoli Piceno,Afghanistan,53.843575,-117.764148
-0b59c704-1594-44c9-8d77-ed29af23f023,Gloria Sinisi,mattia49@example.com,1987-01-25,+393917542572,"Incrocio Tina, 81 Appartamento 88
+0b59c704-1594-44c9-8d77-ed29af23f023,Gloria Sinisi,mattia49@example.com,1987-01-25,+39 3917542572,"Incrocio Tina, 81 Appartamento 88
 65023, San Tommaso (PE)",Castelveccana,75020,Forlì-Cesena,Serbia,-40.993103,124.941359
-805d4357-5b80-4f0f-abf5-45ae5a7cb0c5,Sig. Gianfrancesco Galtarossa,telesioevangelista@example.com,1991-10-04,+393917542572,"Incrocio Salvi, 94
+805d4357-5b80-4f0f-abf5-45ae5a7cb0c5,Sig. Gianfrancesco Galtarossa,telesioevangelista@example.com,1991-10-04,+39 3917542572,"Incrocio Salvi, 94
 36015, Sant'Ulderico (VI)",Airole,10154,Mantova,Saint Martin,-32.355512,-141.880884

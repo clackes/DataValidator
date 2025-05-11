@@ -1,0 +1,16 @@
+{
+    "Product":{
+        "id": "str",
+        "name": "str",
+        "description": "str",
+        "price": "float",
+        "currency": "str",
+        "sku": "str",
+        "category": "str",
+        "stock_quantity": "int",
+        "available": "bool",
+        "created_at": "datetime.datetime",
+        "updated_at": "datetime.datetime",
+        "weight_kg": "float"
+    }
+}

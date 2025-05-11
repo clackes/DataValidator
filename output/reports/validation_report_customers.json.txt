@@ -1,5 +1,5 @@
 === Validation Report ===
-Data validazione: 2025-05-04 20:51:20
+Data validazione: 2025-05-11 19:05:10
 
 Totale clienti validi: 50
 Totale clienti invalidi: 0

@@ -4,6 +4,7 @@ import json
 from typing import Optional, Any
 from pydantic import BaseModel
 from datetime import date
+import datetime
 from pydantic import EmailStr
 
 def load_model_definitions(schema_path: str = "./models/model_schema.json") -> dict:
@@ -17,6 +18,7 @@ def build_models(schema: dict) -> dict:
         "Optional": Optional,
         "EmailStr": EmailStr,
         "date": date,
+        "datetime": datetime,
         "Any": Any
     }
 
@@ -42,5 +44,6 @@ def build_models(schema: dict) -> dict:
         models[class_name] = model
     return models, class_name
 
-models, class_name = build_models(load_model_definitions())
-BaseLoaded = models[f"{class_name}"]
+def get_model():
+    models, class_name = build_models(load_model_definitions())
+    return models[f"{class_name}"]

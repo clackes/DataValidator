@@ -2,9 +2,11 @@
 
 from fastapi import FastAPI, UploadFile, File, HTTPException, Form, Body
 from validator.core import Validatore
+from models.composed import build_combined_model_class
 from validator.reporting import generate_validation_report
 from models.model_gen import load_model_definitions, build_models
 import shutil, os, json
+from pydantic import ValidationError
 from typing import List, Optional
 
 app = FastAPI(title="Data Validator API")
@@ -39,15 +41,15 @@ async def upload_file(file: UploadFile = File(...), flags_json: Optional[str] = 
 
 @app.post("/validate/record")
 async def validate_record(data: dict = Body(...), flags_json: Optional[str] = None):
-    from models.base_model import ModelValidator
-    from pydantic import ValidationError
+    # Decodifica i flag di correzione se forniti
     try:
         flags = json.loads(flags_json) if flags_json else {}
     except json.JSONDecodeError:
         raise HTTPException(status_code=400, detail="Flags JSON non valido")
+    CombinedModel = build_combined_model_class()
     try:
-        base = ModelValidator.model_validate(data, context={'correction_flags': flags})
-        return {"valid": True, "data": base.model_dump()}
+        validated = CombinedModel.model_validate(data, context={'correction_flags': flags})
+        return {"valid": True, "data": validated.model_dump()}
     except ValidationError as e:
         return {"valid": False, "errors": e.errors()}
 
@@ -55,9 +57,10 @@ async def validate_record(data: dict = Body(...), flags_json: Optional[str] = No
 async def load_schema(schema_file: UploadFile = File(...)):
     try:
         content = await schema_file.read()
-        with open("./models/model_schema.json", "wb") as f:
+        with open(f"./models/model_schema.json", "wb") as f:
             f.write(content)
-        loaded = load_model_definitions()
+            f.close()
+        loaded = load_model_definitions(f"./models/model_schema.json")
         models, last_class = build_models(loaded)
         return {"message": f"Schema caricato e modello '{last_class}' generato."}
     except Exception as e:

@@ -9,7 +9,7 @@ strutturati provenienti da file `.csv`, `.json`, `.xml`, `.xlsx`.
 
 ## ⚙️ Funzionalità principali
 ```markdown
-- ✅ Validazione dei dati tramite modelli dinamici generati da JSON
+- ✅ Validazione dei dati runtime tramite modelli dinamici JSON
 - 🧠 Controlli semantici, formali e geografici
 - 🔐 Protezione da input malevoli (SQL/XSS injection)
 - 📦 Output dei risultati in `.json`, `.csv`, `.xlsx`, `.xml`
@@ -23,7 +23,7 @@ strutturati provenienti da file `.csv`, `.json`, `.xml`, `.xlsx`.
 
 ### 1. Definizione dello schema
 
-Nel file `data/model_schema.json` definisci la struttura dei modelli. Esempio:
+Nel file `model_schema.json` definisci la struttura dei modelli. Esempio:
 
 ```json
 {
@@ -48,14 +48,15 @@ Viene generato dinamicamente un modello `BaseCustomer`.
 
 ---
 
-### 2. Esecuzione via CLI
+### 2. Esecuzione via Docker
 #### 📦 Requisiti
 
 ```bash
-pip install -r requirements.txt
+docker-compose up --build -d  
 ```
+Per resettare/eliminare Docker
 ```bash
-python main.py
+docker-compose down -v 
 ```
 
 - Valida ogni file in `./data/`
@@ -78,8 +79,8 @@ uvicorn api.api_endpoints:app --reload
 
 | Metodo | URL                      | Descrizione                    |
 |--------|--------------------------|--------------------------------|
+| POST   | `/schema/load`           | Carica schema prima di validare|
 | POST   | `/upload`                | Carica un file da validare     |
-| POST   | `/validate`              | Valida un file con flags       |
 | POST   | `/validate/record`       | Valida un record singolo       |
 
 ---
@@ -89,20 +90,20 @@ uvicorn api.api_endpoints:app --reload
 Lancia:
 
 ```bash
-python tests/test_api.py
+python test.py
 ```
 
 Esegue test automatici su:
 
-- Upload file
-- Validazione file
+- Upload e validazione file
+- Upload schema
 - Validazione record singolo
 
 ---
 
 ## 🧠 Validazioni implementate
 
-- ✔️ Tipi dinamici (str, date, EmailStr, Optional)
+- ✔️ Tipi dinamici runtime (str, date, EmailStr, Optional)
 - ⚠️ Flag per disattivare validazioni specifiche
 - 🌍 Verifica geografica coerente tra latitudine, città, stato, CAP
 - 🔐 Filtraggio input malevoli (regex anti-injection)

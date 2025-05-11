@@ -1,23 +1,26 @@
 from faker import Faker
-import csv
 import random
+import json
+import csv
+import xml.etree.ElementTree as ET
+import pandas as pd
 
 fake = Faker('it_IT')
 
 def generate_fake_customer(valid=True):
     customer = {
         "id": fake.uuid4(),
-        "name": fake.name(),
-        "email": fake.email(),
-        "birth_date": fake.date_of_birth(minimum_age=18, maximum_age=90),
-        "phone_number": "+39 3917542572",
-        "address": fake.address(),
-        "city": fake.city(),
-        "postal_code": fake.postcode(),
-        "state": fake.state(),
-        "country": fake.country(),
-        "latitude": fake.latitude(),
-        "longitude": fake.longitude(),
+        "name": fake.word().capitalize() + " " + fake.word().capitalize(),
+        "description": fake.sentence(nb_words=12),
+        "price": round(random.uniform(5.0, 500.0), 2),
+        "currency": "EUR",
+        "sku": fake.bothify(text='???-########'),
+        "category": random.choice(["Elettronica", "Abbigliamento", "Casa", "Sport", "Giochi", "Libri"]),
+        "stock_quantity": random.randint(0, 1000),
+        "available": random.choice([True, False]),
+        "created_at": fake.date_time_between(start_date='-2y', end_date='now').isoformat(),
+        "updated_at": fake.date_time_between(start_date='-1y', end_date='now').isoformat(),
+        "weight_kg": round(random.uniform(0.1, 10.0), 2),
     }
 
     if not valid:
@@ -30,18 +33,30 @@ def generate_fake_customer(valid=True):
 if __name__ == "__main__":
     customers = []
 
-    for _ in range(40):
+    for _ in range(50):
         customers.append(generate_fake_customer(valid=True))
-    for _ in range(10):
-        customers.append(generate_fake_customer(valid=False))
-    random.shuffle(customers)
-    if customers:
-        with open('./data/customers_mixed.csv', mode='w', newline='', encoding='utf-8') as csvfile:
-            fieldnames = ['id', 'name', 'email', 'birth_date', 'phone_number', 'address', 'city', 'postal_code', 'state', 'country', 'latitude', 'longitude']
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writeheader()
-            for customer in customers:
-                writer.writerow(customer)
-        print(f"\n✅ Salvati {len(customers)} clienti (validi e invalidi) in 'customers_mixed.csv'")
-    else:
-        print("\n⚠️ Nessun cliente da salvare.")
+    #for _ in range(10):
+    #    customers.append(generate_fake_customer(valid=False))
+# 1. JSON
+    with open("data/products.json", "w", encoding="utf-8") as f:
+        json.dump(customers, f, ensure_ascii=False, indent=4)
+
+    # 2. CSV
+    csv_fields = list(customers[0].keys())
+    with open("data/products.csv", "w", newline='', encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=csv_fields)
+        writer.writeheader()
+        writer.writerows(customers)
+
+    # 3. XML
+    root = ET.Element("products")
+    for p in customers:
+        prod_elem = ET.SubElement(root, "product")
+        for key, value in p.items():
+            ET.SubElement(prod_elem, key).text = str(value)
+    tree = ET.ElementTree(root)
+    tree.write("data/products.xml", encoding="utf-8", xml_declaration=True)
+
+    # 4. XLSX
+    df = pd.DataFrame(customers)
+    df.to_excel("data/products.xlsx", index=False)

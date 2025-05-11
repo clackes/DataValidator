@@ -1,9 +1,8 @@
 #./models/base.py
 
 from pydantic import field_validator, model_validator, ValidationInfo
-from models.model_gen import BaseLoaded
-from typing import Optional
-from datetime import date
+from typing import Optional, Dict
+from datetime import date, datetime
 import re
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut
@@ -35,7 +34,7 @@ def is_malicious_input(text: str) -> bool:
             return True
     return False
 
-class ModelValidator(BaseLoaded):
+class ModelValidator():
     @field_validator('phone_number', check_fields=False)
     @classmethod
     def validate_phone_number(cls, v: Optional[str], info: ValidationInfo) -> Optional[str]:
@@ -108,7 +107,72 @@ class ModelValidator(BaseLoaded):
                 if is_malicious_input(value):
                     raise ValueError(f"Valore potenzialmente pericoloso rilevato nel campo '{field_name}'")
         return model
+
+    @field_validator('price', check_fields=False)
+    @classmethod
+    def validate_price(cls, v: float, info: ValidationInfo) -> float:
+        if v is None:
+            return v
+        correction_flags = info.context.get('correction_flags', {})
+        if not correction_flags.get('price', True):
+            return v
+        if v <= 0:
+            raise ValueError('Il prezzo deve essere maggiore di 0')
+        return v
+
+    @field_validator('stock_quantity', check_fields=False)
+    @classmethod
+    def validate_stock(cls, v: int, info: ValidationInfo) -> int:
+        if v is None:
+            return v
+        correction_flags = info.context.get('correction_flags', {})
+        if not correction_flags.get('stock_quantity', True):
+            return v
+        if v < 0:
+            raise ValueError('La quantità in stock non può essere negativa')
+        return v
+
+    @field_validator('weight_kg', check_fields=False)
+    @classmethod
+    def validate_weight(cls, v: float, info: ValidationInfo) -> float:
+        if v is None:
+            return v
+        correction_flags = info.context.get('correction_flags', {})
+        if not correction_flags.get('weight_kg', True):
+            return v
+        if v <= 0:
+            raise ValueError('Il peso deve essere maggiore di 0')
+        return v
+
+    @field_validator('dimensions_cm', check_fields=False)
+    @classmethod
+    def validate_dimensions(cls, v: Dict[str, float], info: ValidationInfo) -> Dict[str, float]:
+        if v is None:
+            return v
+        correction_flags = info.context.get('correction_flags', {})
+        if not correction_flags.get('dimensions_cm', True):
+            return v
+        for dim in ['length', 'width', 'height']:
+            if v.get(dim, 0) <= 0:
+                raise ValueError(f'La dimensione "{dim}" deve essere maggiore di 0')
+        return v
+
+    @field_validator('updated_at', check_fields=False)
+    @classmethod
+    def validate_updated_at(cls, v: datetime, info: ValidationInfo) -> datetime:
+        if v is None:
+            return v
+        correction_flags = info.context.get('correction_flags', {})
+        if not correction_flags.get('updated_at', True):
+            return v
+        created = info.data.get('created_at')
+        if created and v < created:
+            raise ValueError('La data di aggiornamento non può precedere la data di creazione')
+        return v
     
+
+def get_validators_mixin():
+    return ModelValidator
     #@model_validator(mode='after')
     #@classmethod
     #def check_geolocation_consistency(cls, model, info: ValidationInfo):

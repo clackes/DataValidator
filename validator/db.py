@@ -2,15 +2,55 @@ import os
 import json
 import psycopg2
 from dotenv import load_dotenv
+from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
-def save_to_db(self):
+
+def ensure_database_exists(db_name: str, db_user: str, db_password: str, db_host: str, db_port: str):
+    """Crea il database se non esiste"""
+    conn = psycopg2.connect(
+        dbname="validator_db",  # DB di default per amministrazione
+        user=db_user,
+        password=db_password,
+        host=db_host,
+        port=db_port
+    )
+    conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+    cursor = conn.cursor()
+    cursor.execute("SELECT 1 FROM pg_database WHERE datname = %s", (db_name,))
+    exists = cursor.fetchone()
+    if not exists:
+        cursor.execute(f'CREATE DATABASE "{db_name}"')
+        print(f"✅ Database '{db_name}' creato con successo.")
+    else:
+        print(f"ℹ️ Il database '{db_name}' esiste già.")
+    cursor.close()
+    conn.close()
+
+def save_to_db(self, db_suffix: str):
     load_dotenv()
-    db_url = os.getenv("DATABASE_URL")
 
-    if not db_url:
-        raise ValueError("❌ DATABASE_URL non definito nel file .env")
+    DB_NAME_BASE = os.getenv("POSTGRES_DB")
+    DB_USER = os.getenv("POSTGRES_USER")
+    DB_PASSWORD = os.getenv("POSTGRES_PASSWORD")
+    DB_HOST = os.getenv("POSTGRES_HOST", "localhost")
+    DB_PORT = os.getenv("POSTGRES_PORT", "5432")
 
-    conn = psycopg2.connect(db_url)
+    if not all([DB_NAME_BASE, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT]):
+        raise ValueError("❌ Variabili d'ambiente mancanti nel file .env")
+
+    db_name = f"{DB_NAME_BASE}_{db_suffix}"
+
+    # Crea il database dinamico se non esiste
+    ensure_database_exists(db_name, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT)
+
+    # Connessione al DB specifico
+    conn = psycopg2.connect(
+        dbname=db_name,
+        user=DB_USER,
+        password=DB_PASSWORD,
+        host=DB_HOST,
+        port=DB_PORT
+    )
     cursor = conn.cursor()
 
     if self.valid_input:
