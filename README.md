@@ -49,8 +49,7 @@ Viene generato dinamicamente un modello `BaseCustomer`.
 ---
 
 ### 2. Esecuzione via Docker
-#### 📦 Requisiti
-
+Per avviare il contenitore Docker
 ```bash
 docker-compose up --build -d  
 ```
